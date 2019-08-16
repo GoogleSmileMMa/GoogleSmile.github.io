@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前言 | 前端进阶</title>
+    <meta name="description" content="种一棵树最好的时间是十年前，其次就是现在。">
+    <link rel="icon" href="/images/logo.png">
+  <link rel="icon" href="/images/JavaScript.gif">
+    
+    <link rel="preload" href="/assets/css/0.styles.616a884d.css" as="style"><link rel="preload" href="/assets/js/app.63103db6.js" as="script"><link rel="preload" href="/assets/js/2.acd6bce4.js" as="script"><link rel="preload" href="/assets/js/11.8df27d77.js" as="script"><link rel="prefetch" href="/assets/js/10.5bdea55a.js"><link rel="prefetch" href="/assets/js/12.1580c863.js"><link rel="prefetch" href="/assets/js/13.ff25d272.js"><link rel="prefetch" href="/assets/js/3.d41ecb86.js"><link rel="prefetch" href="/assets/js/4.c01b4ef7.js"><link rel="prefetch" href="/assets/js/5.35e43f1c.js"><link rel="prefetch" href="/assets/js/6.e688a50d.js"><link rel="prefetch" href="/assets/js/7.60b7f7d4.js"><link rel="prefetch" href="/assets/js/8.9b41c7ad.js"><link rel="prefetch" href="/assets/js/9.b279a980.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.616a884d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端进阶</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ES/ES.html" class="nav-link">ES6</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/JavaScript.html" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/Webpack/Webpack.html" class="nav-link">Webpack</a></li><li class="dropdown-item"><!----> <a href="/TypeScript/TypeScript.html" class="nav-link">TypeScript</a></li></ul></div></div><div class="nav-item"><a href="/Blog/Blog.html" class="nav-link">随手记</a></div><div class="nav-item"><a href="/Vue/Vue.html" class="nav-link router-link-exact-active router-link-active">Vue</a></div><div class="nav-item"><a href="https://github.com/GoogleSmile" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/About/about.html" class="nav-link">关于</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/ES/ES.html" class="nav-link">ES6</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/JavaScript.html" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/Webpack/Webpack.html" class="nav-link">Webpack</a></li><li class="dropdown-item"><!----> <a href="/TypeScript/TypeScript.html" class="nav-link">TypeScript</a></li></ul></div></div><div class="nav-item"><a href="/Blog/Blog.html" class="nav-link">随手记</a></div><div class="nav-item"><a href="/Vue/Vue.html" class="nav-link router-link-exact-active router-link-active">Vue</a></div><div class="nav-item"><a href="https://github.com/GoogleSmile" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/About/about.html" class="nav-link">关于</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>前言</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Vue/Vue.html#前言" class="sidebar-link">前言</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Vue/Vue.html#方法一、-props-emit" class="sidebar-link">方法一、 props　/ $emit</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Vue/Vue.html#方法二、-中央事件总线eventbus" class="sidebar-link">方法二、 中央事件总线EventBus</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Vue/Vue.html#方法三、-vuex" class="sidebar-link">方法三、 vuex</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Vue/Vue.html#方法四、-attrs-listeners" class="sidebar-link">方法四、   attrs/ listeners</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Vue/Vue.html#方法五、-provide-inject-底层的通用组件时，使用频率会很高" class="sidebar-link">方法五、 provide/inject (底层的通用组件时，使用频率会很高)</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Vue/Vue.html#方法六、-parent-children-＆-ref" class="sidebar-link">方法六、 parent / children　＆ ref</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/Vue/Vue.html#总结" class="sidebar-link">总结</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="前言"><a href="#前言" aria-hidden="true" class="header-anchor">#</a> 前言</h2> <p>组件是 vue.js最强大的功能之一，而组件实例的作用域是相互独立的，这就意味着不同组件之间的数据无法相互引用。一般来说，组件可以有以下几种关系：</p> <p><img src="https://user-gold-cdn.xitu.io/2019/7/25/16c28b156ddbf501?w=349&amp;h=278&amp;f=png&amp;s=21122" alt=""></p> <p>如上图所示，A 和 B、B 和 C、B 和 D 都是父子关系，C 和 D 是兄弟关系，A 和 C 是隔代关系（可能隔多代）。
+针对不同的使用场景，如何选择行之有效的通信方式？</p> <h2 id="方法一、-props-emit"><a href="#方法一、-props-emit" aria-hidden="true" class="header-anchor">#</a> 方法一、 props　/ $emit</h2> <p>父组件A通过props的方式向子组件B传递。</p> <p><strong>1.父组件向子组件传值</strong></p> <p>接下来我们通过一个例子，说明父组件如何向子组件传递值：在子组件Users.vue中如何获取父组件App.vue中的数据 users:[&quot;Henry&quot;,&quot;Bucky&quot;,&quot;Emily&quot;]</p> <div class="language- extra-class"><pre class="language-text"><code>//App.vue父组件
+&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;users v-bind:users=&quot;users&quot;&gt;&lt;/users&gt;//前者自定义名称便于子组件调用，后者要传递数据名
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import Users from &quot;./components/Users&quot;
+export default {
+  name: 'App',
+  data(){
+    return{
+      users:[&quot;Henry&quot;,&quot;Bucky&quot;,&quot;Emily&quot;]
+    }
+  },
+  components:{
+    &quot;users&quot;:Users
+  }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>//users子组件
+&lt;template&gt;
+  &lt;div class=&quot;hello&quot;&gt;
+    &lt;ul&gt;
+      &lt;li v-for=&quot;user in users&quot;&gt;{{user}}&lt;/li&gt;//遍历传递过来的值，然后呈现到页面
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  name: 'HelloWorld',
+  props:{
+    users:{           //这个就是父组件中子标签自定义名字
+      type:Array,
+      required:true
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre></div><p>总结：父组件通过props向下传递数据给子组件。注：组件中的数据共有三种形式：data、props、computed</p> <p><strong>2.子组件向父组件传值（通过事件形式）</strong></p> <p>接下来我们通过一个例子，说明子组件如何向父组件传递值：当我们点击“Vue.js Demo”后，子组件向父组件传递值，文字由原来的“传递的是一个值”变成“子向父组件传值”，实现子组件向父组件值的传递。</p> <div class="language- extra-class"><pre class="language-text"><code>// 子组件
+&lt;template&gt;
+  &lt;header&gt;
+    &lt;h1 @click=&quot;changeTitle&quot;&gt;{{title}}&lt;/h1&gt;//绑定一个点击事件
+  &lt;/header&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  name: 'app-header',
+  data() {
+    return {
+      title:&quot;Vue.js Demo&quot;
+    }
+  },
+  methods:{
+    changeTitle() {
+      this.$emit(&quot;titleChanged&quot;,&quot;子向父组件传值&quot;);//自定义事件  传递值“子向父组件传值”
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 父组件
+&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;app-header @titleChanged=&quot;updateTitle&quot; &gt;&lt;/app-header&gt;//与子组件titleChanged自定义事件保持一致
+   // updateTitle($event)接受传递过来的文字
+    &lt;h2&gt;{{title}}&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import Header from &quot;./components/Header&quot;
+export default {
+  name: 'App',
+  data(){
+    return{
+      title:&quot;传递的是一个值&quot;
+    }
+  },
+  methods:{
+    updateTitle(e){   //声明这个函数
+      this.title = e;
+    }
+  },
+  components:{
+   &quot;app-header&quot;:Header,
+  }
+}
+&lt;/script&gt;
+</code></pre></div><p>总结：子组件通过events给父组件发送消息，实际上就是子组件把自己的数据发送到父组件。</p> <h2 id="方法二、-中央事件总线eventbus"><a href="#方法二、-中央事件总线eventbus" aria-hidden="true" class="header-anchor">#</a> 方法二、 中央事件总线EventBus</h2> <p>对于父子组件之间的通信，上面的方式是完全可以实现的，但是对于两个组件不是父子关系，那么又该如何实现通信呢？在项目规模不大的情况下，完全可以使用中央事件总线 EventBus 的方式。如果你的项目规模是大中型的，那你可以使用我们后面即将介绍的 Vuex 状态管理。
+EventBus的简介
+EventBus 又称为事件总线。在Vue中可以使用 EventBus 来作为沟通桥梁的概念，就像是所有组件共用相同的事件中心，可以向该中心注册发送事件或接收事件，所以组件都可以上下平行地通知其他组件，但也就是太方便所以若使用不慎，就会造成难以维护的灾难，因此才需要更完善的Vuex作为状态管理中心，将通知的概念上升到共享状态层次。</p> <p>如何使用EventBus
+在Vue的项目中怎么使用 EventBus 来实现组件之间的数据通讯呢？具体可以通过下面几个步骤来完成。</p> <p>初始化
+首先你需要做的是创建事件总线并将其导出，以便其它模块可以使用或者监听它。我们可以通过两种方式来处理。先来看第一种，新创建一个 .js 文件，比如 eventBus.js ：</p> <div class="language- extra-class"><pre class="language-text"><code>// eventBus.js
+import Vue from 'vue'
+export const EventBus = new Vue()
+</code></pre></div><p>你需要做的只是引入 Vue 并导出它的一个实例（在这种情况下，我称它为 EventBus ）。实质上它是一个不具备 DOM 的组件，它具有的仅仅只是它实例方法而已，因此它非常的轻便。
+另外一种方式，可以直接在项目中的 main.js 初始化 EventBus ：</p> <div class="language- extra-class"><pre class="language-text"><code>// main.js
+Vue.prototype.$EventBus = new Vue()
+</code></pre></div><p>注意，这种方式初始化的 EventBus 是一个 全局的事件总线
+现在我们已经创建了 EventBus ，接下来你需要做到的就是在你的组件中加载它，并且调用同一个方法，就如你在父子组件中互相传递消息一样。</p> <p>例子：
+在A.vue中触发</p> <div class="language- extra-class"><pre class="language-text"><code>import EventBus from 'eventBus.js'; 
+// 必须引入同一个实例
+
+methods： {
+    doSomething() {
+        EventBus.$emit(&quot;getTarget&quot;, 22);
+        console.log(&quot;向getTarget方法传参22&quot;);
+    }
+}
+</code></pre></div><p>B.vue中监听一个事件</p> <div class="language- extra-class"><pre class="language-text"><code>import EventBus from 'eventBus.js'; 
+// 我们在create钩子中监听方法
+create(){
+    console.log(&quot;this.getTarget是一个带参数的方法，但是这边只要将两者关联起来&quot;);
+    EventBus.$on('getTarget', this.getTarget); 
+},
+beforeDestroy() {
+    console.log(&quot;组件销毁前需要解绑事件。否则会出现重复触发事件的问题&quot;);
+    EventBus.$off('getTarget', this.getTarget);
+},
+methods: {
+    getTarget(param) {
+        // todo
+    }
+}
+</code></pre></div><p>eventBus其实非常方便，任何的组件通信都能用它来完成。但是，我们会根据情况来选择更易维护的方式。因为eventBus比较不好找到对应的监听或者触发事件具体实现的地方，所以一般组件通信更考虑上面的实现方式。在模块之间通信利用eventBus，然后在模块内部，利用vuex通信，维护数据，会在逻辑上比较清晰。</p> <h2 id="方法三、-vuex"><a href="#方法三、-vuex" aria-hidden="true" class="header-anchor">#</a> 方法三、 vuex</h2> <p><img src="https://user-gold-cdn.xitu.io/2019/7/25/16c28bdfdedb1c3b?w=752&amp;h=457&amp;f=png&amp;s=89662" alt=""> <strong>1.简要介绍Vuex原理</strong></p> <p>Vuex实现了一个单向数据流，在全局拥有一个State存放数据，当组件要更改State中的数据时，必须通过Mutation进行，Mutation同时提供了订阅者模式供外部插件调用获取State数据的更新。而当所有异步操作(常见于调用后端接口异步获取更新数据)或批量的同步操作需要走Action，但Action也是无法直接修改State的，还是需要通过Mutation来修改State的数据。最后，根据State的变化，渲染到视图上。</p> <p><strong>2.简要介绍各模块在流程中的功能：</strong></p> <p>Vue Components：Vue组件。HTML页面上，负责接收用户操作等交互行为，执行dispatch方法触发对应action进行回应。</p> <p>dispatch：操作行为触发方法，是唯一能执行action的方法。</p> <p>actions：操作行为处理模块,由组件中的 $store.dispatch('action 名称',data1)来触发。然后由commit()来触发mutation的调用 , 间接更新 state。负责处理Vue Components接收到的所有交互行为。包含同步/异步操作，支持多个同名方法，按照注册的顺序依次触发。向后台API请求的操作就在这个模块中进行，包括触发其他action以及提交mutation的操作。该模块提供了Promise的封装，以支持action的链式触发。</p> <p>commit：状态改变提交操作方法。对mutation进行提交，是唯一能执行mutation的方法。</p> <p>mutations：状态改变操作方法，由actions中的 commit('mutation 名称')来触发。是Vuex修改state的唯一推荐方法。该方法只能进行同步操作，且方法名只能全局唯一。操作之中会有一些hook暴露出来，以进行state的监控等。</p> <p>state：页面状态管理容器对象。集中存储Vue components中data对象的零散数据，全局唯一，以进行统一的状态管理。页面显示所需的数据从该对象中进行读取，利用Vue的细粒度数据响应机制来进行高效的状态更新。</p> <p>getters：state对象读取方法。图中没有单独列出该模块，应该被包含在了render中，Vue Components通过该方法读取全局state对象。</p> <p><strong>3.具体使用：</strong></p> <p>store/index.js</p> <div class="language- extra-class"><pre class="language-text"><code>import Vuex from 'vuex';
+import Vue from 'vue';
+Vue.use(Vuex);
+const store = new Vuex.Store({
+    state: {
+        stateName: 'xxxx'
+    },
+    mutations: {
+       mutationsName(state, {params}) {
+           state.stateName = params;
+            console.log(&quot;只有在mutations中才能直接改变state中的值&quot;)
+       } 
+    },
+    actions: {
+        actionName({ state,commit}, {params}) {
+        let actionParam = 'mmm';
+            commit('mutationsName', actionParam );
+            console.log(&quot; 触发mutation 方法要用commit分发，以此改变state&quot;);
+        }
+    }
+       
+});
+export default store;
+</code></pre></div><p>main.js</p> <div class="language- extra-class"><pre class="language-text"><code>import store from './store/index.js';
+new Vue({
+  el: '#app',
+  store,
+  console.log(&quot;将store挂载到vue实例上&quot;)
+  render: h =&gt; h(App)
+})
+</code></pre></div><p>在组件中使用</p> <p>child.vue js部分</p> <div class="language- extra-class"><pre class="language-text"><code>**import { mapActions, mapMutations, mapState } from 'vuex';
+export default {
+    computed: {
+        ...mapState({ stateName })
+    },
+    methods: {
+        ...mapActions(['actionName']),
+        ...mapMutations(['mutationName'])
+        console.log(&quot;使用辅助函数mapMutations直接将触发函数映射到methods上&quot;)
+    }
+    
+    // 接下来在实例中就可以用this.stateName,this.actionName来调用
+
+}
+</code></pre></div><p>当兄弟组件很多，涉及到的处理数据庞大的时候，可以用到vuex中的modules，使得结构更加清晰</p> <div class="language- extra-class"><pre class="language-text"><code>const moduleA = {
+  state: { ... },
+  mutations: { ... },
+  actions: { ... },
+  getters: { ... }
+}
+
+const moduleB = {
+  state: { ... },
+  mutations: { ... },
+  actions: { ... }
+}
+
+const store = new Vuex.Store({
+  modules: {
+    a: moduleA,
+    b: moduleB
+  }
+})
+
+store.state.a // -&gt; moduleA 的状态
+store.state.b // -&gt; moduleB 的状态
+</code></pre></div><h2 id="方法四、-attrs-listeners"><a href="#方法四、-attrs-listeners" aria-hidden="true" class="header-anchor">#</a> 方法四、   attrs/ listeners</h2> <p><strong>1.简介</strong></p> <p>多级组件嵌套需要传递数据时，通常使用的方法是通过vuex。但如果仅仅是传递数据，而不做中间处理，使用 vuex 处理，未免有点大材小用。
+父子组件之间的数据传输有一个问题：如果父组件A下面有子组件B，组件B下面有组件C,这时如果组件A想传递数据给组件C怎么办呢？ 如果采用props方法，我们必须让组件A通过prop传递消息给组件B，组件B在通过prop传递消息给组件C；要是组件A和组件C之间有更多的组件，那采用这种方式就很复杂了。Vue 2.4开始提供了attrs和listeners来解决这个问题，能够让组件A之间传递消息给组件C。</p> <p>官网对 $attrs 的解释如下：</p> <pre><code>$attrs：包含了父作用域中不被 prop 所识别 (且获取) 的特性绑定 (class 和 style 除外)。当一个组件没有声明任何 prop 时，这里会包含所有父作用域的绑定 (class 和 style 除外)，并且可以通过 v-bind=&quot;$attrs&quot; 传入内部组件。通常配合 interitAttrs 选项一起使用。
+</code></pre> <p>官网对 $listeners 的解释如下：</p> <pre><code>$listeners：包含了父作用域中的 (不含 .native 修饰器的) v-on 事件监听器。它可以通过 v-on=&quot;$listeners&quot; 传入内部组件
+</code></pre> <p>以上是官网对$attrs的解释，我刚看我也是一脸懵逼，回去试了一下其实并不难，而且比较适用组件深层嵌套场景下，祖先组件向子组件传值的问题</p> <p>我的理解：</p> <div class="language- extra-class"><pre class="language-text"><code>意思就是父组件传向子组件传的，子组件不prop接受的数据都会放在$attrs中，子组件直接用this.$attrs获取就可以了。如过从父-&gt;孙传，就在子组件中添加v-bind='$attrs'，就把父组件传来的子组件没props接收的数据全部传到孙组件；我觉得 $attrs 和 $listeners 属性像两个收纳箱，一个负责收纳属性，一个负责收纳事件，都是以对象的形式来保存数据；
+</code></pre></div><p>接下来我们看个跨级通信的例子：</p> <div class="language- extra-class"><pre class="language-text"><code>// index.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;大漠孤烟&lt;/h2&gt;
+    &lt;child-com1
+      :foo=&quot;foo&quot;
+      :boo=&quot;boo&quot;
+      :coo=&quot;coo&quot;
+      :doo=&quot;doo&quot;
+      @one.native=&quot;triggerOne&quot;
+      @two=&quot;triggerTwo&quot;
+      title=&quot;Vue通信&quot;
+    &gt;&lt;/child-com1&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+const childCom1 = () =&gt; import(&quot;./childCom1.vue&quot;);
+export default {
+  components: { childCom1 },
+  data() {
+    return {
+      foo: &quot;Javascript&quot;,
+      boo: &quot;Html&quot;,
+      coo: &quot;CSS&quot;,
+      doo: &quot;Vue&quot;
+    };
+  },
+  methods:{
+    triggerOne(){
+      alert('one')
+    },
+    triggerTwo(){
+      alert('two')
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// childCom1.vue
+&lt;template class=&quot;border&quot;&gt;
+  &lt;div&gt;
+    &lt;p&gt;foo: {{ foo }}&lt;/p&gt;
+    &lt;p&gt;childCom1的$attrs: {{ $attrs }}&lt;/p&gt;
+    &lt;child-com2 v-bind=&quot;$attrs&quot; v-on=&quot;$listeners&quot;&gt;&lt;/child-com2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+const childCom2 = () =&gt; import(&quot;./childCom2.vue&quot;);
+export default {
+  components: {
+    childCom2
+  },
+  // 默认为true，如果传入的属性子组件没有prop接受，就会以字符串的形式出现为标签属性
+  // 设为false，在dom中就看不到这些属性，试一下就知道了
+  inheritAttrs: false, // 可以关闭自动挂载到组件根元素上的没有在props声明的属性
+  props: {
+    foo: String // foo作为props属性绑定
+  },
+  mounted() {
+    console.log(this.$attrs); // { &quot;boo&quot;: &quot;Html&quot;, &quot;coo&quot;: &quot;CSS&quot;, &quot;doo&quot;: &quot;Vue&quot;, &quot;title&quot;: &quot;Vue通信&quot; }
+    console.log(this.$listeners);
+  }
+};
+&lt;/script&gt;
+
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// childCom2.vue
+&lt;template&gt;
+  &lt;div class=&quot;border&quot;&gt;
+    &lt;p&gt;boo: {{ boo }}&lt;/p&gt;
+    &lt;p&gt;childCom2的$attrs: {{ $attrs }}&lt;/p&gt;
+    &lt;child-com3 v-bind=&quot;$attrs&quot; v-on=&quot;$listeners&quot;&gt;&lt;/child-com3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+const childCom3 = () =&gt; import(&quot;./childCom3.vue&quot;);
+export default {
+  components: {
+    childCom3
+  },
+  inheritAttrs: false,
+  props: {
+    boo: String
+  },
+  mounted() {
+    console.log(this.$attrs); // {&quot;coo&quot;: &quot;CSS&quot;, &quot;doo&quot;: &quot;Vue&quot;, &quot;title&quot;: &quot;Vue通信&quot; }
+    console.log(this.$listeners);
+  }
+};
+&lt;/script&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// childCom3.vue
+&lt;template&gt;
+  &lt;div class=&quot;border&quot;&gt;
+    &lt;p&gt;childCom3: {{ $attrs }}&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  props: {
+    coo: String,
+    title: String
+  },
+  mounted() {
+    console.log(this.$listeners);
+    // this.$listeners.two();
+  }
+};
+&lt;/script&gt;
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2019/7/25/16c28cbb796efae9?w=645&amp;h=254&amp;f=png&amp;s=25022" alt=""></p> <div class="language- extra-class"><pre class="language-text"><code>$attrs表示没有继承数据的对象，格式为{属性名：属性值}。Vue2.4提供了 $attrs , $listeners 来传递数据与事件，跨级组件之间的通讯变得更简单。
+简单来说： $attrs与 $listeners 是两个对象， $attrs 里存放的是父组件中绑定的非 Props 属性， $listeners里存放的是父组件中绑定的非原生事件。
+</code></pre></div><h2 id="方法五、-provide-inject-底层的通用组件时，使用频率会很高"><a href="#方法五、-provide-inject-底层的通用组件时，使用频率会很高" aria-hidden="true" class="header-anchor">#</a> 方法五、 provide/inject (底层的通用组件时，使用频率会很高)</h2> <p><strong>1.简介</strong></p> <p>Vue2.2.0新增API,这对选项需要一起使用，以允许一个祖先组件向其所有子孙后代注入一个依赖，不论组件层次有多深，并在起上下游关系成立的时间里始终生效。一言而蔽之：祖先组件中通过provider提供变量，然后在子孙组件中通过inject来注入变量。provide / inject API 主要解决了跨级组件间的通信问题，不过它的使用场景，主要是子组件获取上级组件的状态，跨级组件间建立了一种主动提供与依赖注入的关系。
+来看下官方对 provide / inject 的描述：
+provide 和 inject 主要为高阶插件/组件库提供用例。并不推荐直接用于应用程序代码中。并且这对选项需要一起使用，以允许一个祖先组件向其所有子孙后代注入一个依赖，不论组件层次有多深，并在起上下游关系成立的时间里始终生效。</p> <p><strong>2.举个例子</strong></p> <p>假设有两个组件： A.vue 和 B.vue，B 是 A 的子组件</p> <div class="language- extra-class"><pre class="language-text"><code>// A.vue
+export default {
+  provide: {
+    name: '大漠孤烟'
+  }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// B.vue
+export default {
+  inject: ['name'],
+  mounted () {
+    console.log(this.name);  // 大漠孤烟
+  }
+}
+</code></pre></div><p>可以看到，在 A.vue 里，我们设置了一个 provide: name，值为 大漠孤烟，它的作用就是将 name 这个变量提供给它的所有子组件。而在 B.vue 中，通过 inject 注入了从 A 组件中提供的 name 变量，那么在组件 B 中，就可以直接通过 this.name 访问这个变量了，它的值也是 大漠孤烟。这就是 provide / inject API 最核心的用法。</p> <p>需要注意的是：provide 和 inject 绑定并不是可响应的。这是刻意为之的。然而，如果你传入了一个可监听的对象，那么其对象的属性还是可响应的----vue官方文档。所以，上面 A.vue 的 name 如果改变了，B.vue 的 this.name 是不会改变的，仍然是 大漠孤烟。</p> <p><strong>3.provide与inject 怎么实现数据响应式</strong></p> <p>一般来说，有两种办法：</p> <blockquote><p>provide祖先组件的实例，然后在子孙组件中注入依赖，这样就可以在子孙组件中直接修改祖先组件的实例的属性，不过这种方法有个缺点就是这个实例上挂载很多没有必要的东西比如props，methods</p></blockquote> <blockquote><p>使用2.6最新API Vue.observable 优化响应式 provide(推荐)
+我们来看个例子：孙组件E 和 获取A组件传递过来的color值，并能实现数据响应式变化，即A组件的color变化后，组件E、F会跟着变（核心代码如下：）</p></blockquote> <p><img src="https://user-gold-cdn.xitu.io/2019/7/25/16c28ce2cc7827fb?w=728&amp;h=453&amp;f=png&amp;s=67179" alt=""></p> <div class="language- extra-class"><pre class="language-text"><code>// A 组件 
+&lt;div&gt;
+      &lt;h1&gt;A 组件&lt;/h1&gt;
+      &lt;button @click=&quot;() =&gt; changeColor()&quot;&gt;改变color&lt;/button&gt;
+      &lt;ChildrenB /&gt;
+      &lt;ChildrenC /&gt;
+&lt;/div&gt;
+......
+  data() {
+    return {
+      color: &quot;blue&quot;
+    };
+  },
+  // provide() {
+  //   return {
+  //     theme: {
+  //       color: this.color //这种方式绑定的数据并不是可响应的
+  //     } // 即A组件的color变化后，组件E、F 不会跟着变
+  //   };
+  // },
+  provide() {
+    return {
+      theme: this//方法一：提供祖先组件的实例
+    };
+  },
+  methods: {
+    changeColor(color) {
+      if (color) {
+        this.color = color;
+      } else {
+        this.color = this.color === &quot;blue&quot; ? &quot;red&quot; : &quot;blue&quot;;
+      }
+    }
+  }
+  // 方法二:使用vue2.6最新API Vue.observable 优化响应式 provide
+  // provide() {
+  //   this.theme = Vue.observable({
+  //     color: &quot;blue&quot;
+  //   });
+  //   return {
+  //     theme: this.theme
+  //   };
+  // },
+  // methods: {
+  //   changeColor(color) {
+  //     if (color) {
+  //       this.theme.color = color;
+  //     } else {
+  //       this.theme.color = this.theme.color === &quot;blue&quot; ? &quot;red&quot; : &quot;blue&quot;;
+  //     }
+  //   }
+  // }
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// F 组件 
+&lt;template functional&gt;
+  &lt;div class=&quot;border2&quot;&gt;
+    &lt;h3 :style=&quot;{ color: injections.theme.color }&quot;&gt;F 组件&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  inject: {
+    theme: {
+      //函数式组件取值不一样
+      default: () =&gt; ({})
+    }
+  }
+};
+&lt;/script&gt;
+</code></pre></div><p>虽说provide 和 inject 主要为高阶插件/组件库提供用例，但如果你能在业务中熟练运用，可以达到事半功倍的效果！</p> <h2 id="方法六、-parent-children-＆-ref"><a href="#方法六、-parent-children-＆-ref" aria-hidden="true" class="header-anchor">#</a> 方法六、 parent / children　＆ ref</h2> <div class="language- extra-class"><pre class="language-text"><code>$parent / $children：访问父 / 子实例
+ref：如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素；如果用在子组件上，引用就指向组件实例
+</code></pre></div><p>需要注意的是：这两种都是直接得到组件实例，使用后可以直接调用组件的方法或访问数据。我们先来看个用 ref来访问组件的例子：</p> <div class="language- extra-class"><pre class="language-text"><code>// component-a 子组件
+export default {
+  data () {
+    return {
+      title: 'Vue.js'
+    }
+  },
+  methods: {
+    sayHello () {
+      window.alert('Hello');
+    }
+  }
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 父组件
+&lt;template&gt;
+  &lt;component-a ref=&quot;comA&quot;&gt;&lt;/component-a&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  export default {
+    mounted () {
+      const comA = this.$refs.comA;
+      console.log(comA.title);  // Vue.js
+      comA.sayHello();  // 弹窗
+    }
+  }
+&lt;/script&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>$parent 和 $children
+</code></pre></div><p>这里要说的这种方式就比较直观了，直接操作父子组件的实例。$parent 就是父组件的实例对象，而 $children 就是当前实例的直接子组件实例了，不过这个属性值是数组类型的，且并不保证顺序，也不是响应式的。
+parent组件：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+    &lt;div class=&quot;&quot;&gt;
+      &lt;p&gt;this is parent component!&lt;/p&gt;
+        &lt;button @click=&quot;changeChildValue&quot;&gt;test&lt;/button&gt;
+      &lt;child /&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+    data() {
+        return {
+          message: 'hello'
+        }
+    },
+    methods: {
+      changeChildValue(){
+        this.$children[0].mymessage = 'hello';
+      }
+    },
+}
+&lt;/script&gt;
+
+&lt;style lang=&quot;less&quot; scoped&gt;
+&lt;/style&gt;
+</code></pre></div><p>children组件：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+    &lt;div class=&quot;&quot;&gt;
+      &lt;input type=&quot;text&quot; v-model=&quot;mymessage&quot; @change=&quot;changeValue&quot; /&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+    data() {
+      return {
+        mymessage: this.$parent.message
+      }
+    },
+    methods: {
+      changeValue(){
+        this.$parent.message = this.mymessage;//通过如此调用可以改变父组件的值
+        console.log(this.$parent.message)
+      }
+    }
+}
+&lt;/script&gt;
+
+&lt;style lang=&quot;less&quot; scoped&gt;
+&lt;/style&gt;
+
+</code></pre></div><p>不过，这两种方法的弊端是，无法在跨级或兄弟间通信。</p> <div class="language- extra-class"><pre class="language-text"><code>// parent.vue
+&lt;component-a&gt;&lt;/component-a&gt;
+&lt;component-b&gt;&lt;/component-b&gt;
+&lt;component-b&gt;&lt;/component-b&gt;
+</code></pre></div><p>我们想在 component-a 中，访问到引用它的页面中（这里就是 parent.vue）的两个 component-b 组件，那这种情况下，就得配置额外的插件或工具了，比如 Vuex 和 Bus 的解决方案。</p> <h2 id="总结"><a href="#总结" aria-hidden="true" class="header-anchor">#</a> 总结</h2> <div class="language- extra-class"><pre class="language-text"><code>常见使用场景可以分为三类：
+父子通信： 父向子传递数据是通过 props，子向父是通过 events（ $emit）；通过父链 / 子链也可以通信（ $parent / $children）；ref 也可以访问组件实例；provide / inject API； $attrs/$listeners
+兄弟通信： Bus；Vuex
+跨级通信： Bus；Vuex；provide / inject API、 $attrs/$listeners
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.63103db6.js" defer></script><script src="/assets/js/2.acd6bce4.js" defer></script><script src="/assets/js/11.8df27d77.js" defer></script>
+  </body>
+</html>
